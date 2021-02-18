@@ -1,0 +1,130 @@
+:root {
+    --primary-dark-cyan: hsl(185, 75%, 39%);
+    --primary-very-dark-blue: hsl(229, 23%, 23%);
+    --primary-grayish-blue: hsl(227, 10%, 46%);
+    --neutral-dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    color: var(--primary-grayish-blue)
+}
+
+.container {
+    height: 100vh;
+    background: var(--primary-dark-cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    width: 400px;
+    height: 100%;
+}
+.bottom-circle {
+    background-image: url('images/bg-pattern-bottom.svg');
+    bottom: -50%;
+    right: -20%;
+}
+.top-circle {
+    background-image: url('images/bg-pattern-top.svg');
+    transform: rotate(180deg);
+    top: -70%;
+    left: -10%;
+}
+
+.card {
+    width: 360px;
+    height: 400px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-header {
+    background-image: url('images/bg-pattern-card.svg');
+    height: 120px;
+    position: relative;
+}
+
+.img-profile {
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    border: 5px solid #fff;
+
+    transform: translate(-50%, -10%);
+}
+
+
+.card-body {
+    background: #fff;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body span:last-child {
+    margin-top: 10px;
+}
+
+.card-footer {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.5rem;
+    width: 100%;
+    bottom: 0;
+
+    border-top: 1px solid var(--neutral-dark-gray);
+}
+
+.rating-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+}
+
+.rating-container span:last-child {
+    font-size: 11px;
+    margin-top: 10px;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.tx-bold {
+    font-weight: 700;
+    color:hsl(229, 23%, 23%)
+}
+
+@media screen and (min-width: 720px) {
+    .circle {
+        width: 400px;
+    }
+    .bottom-circle {
+        bottom: -30%;
+    }
+}
+
+@media screen and (min-width: 1028px) {
+    .circle {
+        width: 800px;
+    }
+}
